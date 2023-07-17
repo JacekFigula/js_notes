@@ -66,55 +66,55 @@
 // function magic() {
 //     var y = 42;
 //     let y1 = 42;
-//     const y2 = 42;
+// //     const y2 = 42;
+// // }
+// //
+// // magic();
+// // console.log(y, y1, y2);   - żadne nie zadziała, bo istnieją tylko w ramach bloku w funkcji
+//
+// //functions
+//
+// // named function
+// function addDigits(digit1, digit2) {
+//     return digit1 + digit2;
 // }
 //
-// magic();
-// console.log(y, y1, y2);   - żadne nie zadziała, bo istnieją tylko w ramach bloku w funkcji
-
-//functions
-
-// named function
-function addDigits(digit1, digit2) {
-    return digit1 + digit2;
-}
-
-addDigits(1, 2);
-
-// anonymous function
-// classic
-// function expression (wyrażenie funkcyjne) - przypisanie deklaracji fn do zmiennej
-const addDigits2 = function (digit1, digit2) {
-    return digit1 + digit2;
-}
-
-addDigits2(1, 2);
-
-// arrow function - funkcja strzałkowa, fat arrow function (nie ma this, ani arguments)
-const addDigits3 = (digit1, digit2) => {
-    return digit1 + digit2;
-}
-
-addDigits3(1, 2);
-
-// wariancje arrow fn
-const add = () => {
-    return 42;
-}
-const add1 = a => {
-    return a + 42;
-} //nie pisać tak, zawsze pisać okrągłe nawiasy
-const add2 = (a, b) => {
-    return a + b;
-}
-const add3 = (a, b) => a + b; // implicit return, jak nie ma klamerek, to automatycznie zwraca wynik z wyrażenia
-
-const magic = a => a <= 0; // (a) => (a <= 0), (a) => { return a <= 0 }
-const magic2 = () => {
-    return {a: 42}
-}
-// to samo co wyżej
-const magic3 = () => ({a: 42}) // ({}) - () daje znać do JS, że {} nie jest ciałem funkcji tylko implicit return {a:42}
+// addDigits(1, 2);
+//
+// // anonymous function
+// // classic
+// // function expression (wyrażenie funkcyjne) - przypisanie deklaracji fn do zmiennej
+// const addDigits2 = function (digit1, digit2) {
+//     return digit1 + digit2;
+// }
+//
+// addDigits2(1, 2);
+//
+// // arrow function - funkcja strzałkowa, fat arrow function (nie ma this, ani arguments)
+// const addDigits3 = (digit1, digit2) => {
+//     return digit1 + digit2;
+// }
+//
+// addDigits3(1, 2);
+//
+// // wariancje arrow fn
+// const add = () => {
+//     return 42;
+// }
+// const add1 = a => {
+//     return a + 42;
+// } //nie pisać tak, zawsze pisać okrągłe nawiasy
+// const add2 = (a, b) => {
+//     return a + b;
+// }
+// const add3 = (a, b) => a + b; // implicit return, jak nie ma klamerek, to automatycznie zwraca wynik z wyrażenia
+//
+// const magic = a => a <= 0; // (a) => (a <= 0), (a) => { return a <= 0 }
+// const magic2 = () => {
+//     return {a: 42}
+// }
+// // to samo co wyżej
+// const magic3 = () => ({a: 42}) // ({}) - () daje znać do JS, że {} nie jest ciałem funkcji tylko implicit return {a:42}
 
 // Control Flow
 
@@ -152,8 +152,8 @@ const magic3 = () => ({a: 42}) // ({}) - () daje znać do JS, że {} nie jest ci
 
 //loops
 
-const x = [1, 2, 3];
-const y = [];
+// const x = [1, 2, 3];
+// const y = [];
 
 // //najszybsza pętla w JS
 // for (let i = 0; i < x.length; i++){
@@ -234,13 +234,28 @@ const y = [];
 
 //Policz średnią elementów z tablicy
 
-function calculateAvg(numbers) {
-    let sum=0;
-    for(const number of numbers){
-        sum = sum + number;
-    }
-   return sum / numbers.length;
+// function calculateAvg(numbers) {
+//     let sum=0;
+//     for(const number of numbers){
+//         sum = sum + number;
+//     }
+//    return sum / numbers.length;
+//
+// }
+//
+// console.log(calculateAvg([1, 2, 34, 4, 5]));
+//
+// function m(...rest){
+//     console.log(rest)
+// }
+// m(1,2,3,4,5)
 
-}
-
-console.log(calculateAvg([1, 2, 34, 4, 5]));
+// używanie funkcji map!
+// function calculateAvgAge(elements) {
+//     const ages = elements.map((element) => element.age);
+//     return ages;
+// }
+//
+//
+// const result = calculateAvgAge(data);
+// console.log(result);
