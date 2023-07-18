@@ -138,13 +138,6 @@ const data = [
 
 //sprawdź, czy wszyscy są młodsi niż 30 lat
 
-// function isAllYoungerThan30(items) {
-//     let result3 = 0
-//     const result2 = items.filter((item) => item.age > 30);
-//    if (result2.length > 0) {
-//        return false;
-//     }
-// }
 
 // function isAllYoungerThan30(data) {
 //     for (const item of data){
