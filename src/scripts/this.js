@@ -108,4 +108,54 @@ class User1 {
     }
 }
 
-const u5 = new User1('Zbigniew');
+// const u5 = new User1('Zbigniew');
+
+// function magic (data){
+//     this.data = data;
+//     console.log(this)
+// }
+//
+// const context = {
+//     a: 1, b:2
+// }
+//
+// magic.call(context, "ala ma kota");
+// magic.apply(context, ["ala ma kota i ejc"]);
+// const magic2 = magic.bind(context);
+// magic2()
+
+const h1Ref = document.querySelector('#title')
+
+class Magic {
+    constructor() {
+        this.counter = 0;
+    }
+
+    click() {
+        /// this - object klasy Magic
+
+
+        /// this - object klasy Magic
+        // h1Ref.addEventListener('click', (function(){
+        //     this.counter++; // wskazuje na obiekt h1ref -> dot notation
+        //     console.log(this.counter);
+        // }).bind(this))
+        // ///this - object klasy Magic
+
+        // // janusze programowania
+        // const that = this;
+        // h1Ref.addEventListener('click', (function () {
+        //     this.counter++; // wskazuje na obiekt h1ref -> dot notation
+        //     console.log(this.counter);
+        // }).bind(this))
+
+        //arrow function nie ma this w ogóle, więc this od h1Ref szuka najbliższego kontekstu thisa w otoczeniu i znajduje go w click() który odwołuje się do obiektu klasy Magic i wtedy działa
+        h1Ref.addEventListener('click', () => {
+            this.counter++; // wskazuje na obiekt h1ref -> dot notation
+            console.log(this.counter);
+        })
+    }
+}
+
+const m = new Magic();
+m.click()
