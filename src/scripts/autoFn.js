@@ -2,7 +2,7 @@
 // samochód ma brand, prędkość, silnik, max prędkość
 // samochód może przyspieszac, zwalniac, odpalać silnik i gasić
 
-function createbmw(brand, maxSpeed){
+function createauto(brand, maxSpeed){
     return {
         brand,
         speed: 0,
@@ -11,8 +11,8 @@ function createbmw(brand, maxSpeed){
     }
 }
 
-const bmw = createbmw('bmw', 140);
-const mercedes = createbmw('mercedes', 190);
+const bmw = createauto('bmw', 140);
+const mercedes = createauto('mercedes', 190);
 
 function startEngine(car){
     if (!car.engine){
